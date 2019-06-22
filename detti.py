@@ -16,7 +16,7 @@ def main():
     #if not url:
     #    url="localhost"
     if not Ns:
-        Ns=10
+        Ns=request.args.get('N',default = 10, type = int)
     #if not lenghts:
     #    lenghts=1
 
