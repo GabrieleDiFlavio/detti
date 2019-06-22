@@ -3,7 +3,10 @@ import urllib.request
 from flask import Flask
 from flask import request
 
+#insert flask annotation here
+app = Flask(__name__)
 
+@app.route('/')
 def main():
 
     #url = req.params.get('URL')
@@ -29,6 +32,7 @@ def main():
     # if lenght > 1:
     #    s = url +"&Ns="+str(N)+"&lenghts="+str(lenght-1)+"&URL="+url
     #    contents = urllib.request.urlopen(s).read()
+    print(big_string)
     return big_string
 
 
@@ -49,5 +53,5 @@ def computepi(N):
 
 
 if __name__ == "__main__":
-    valore=main()
-    print(valore)
+    app.run(host='0.0.0.0', threaded=True)
+
