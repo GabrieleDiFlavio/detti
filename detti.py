@@ -10,13 +10,14 @@ app = Flask(__name__)
 def main():
 
     #url = req.params.get('URL')
-    Ns = 1000
+    Ns = request.args.get('N',default = 10, type = int)
     #lenghts = req.params.get('lenghts')
 
     #if not url:
     #    url="localhost"
     if not Ns:
-        Ns=request.args.get('N',default = 10, type = int)
+         Ns=10
+
     #if not lenghts:
     #    lenghts=1
 
